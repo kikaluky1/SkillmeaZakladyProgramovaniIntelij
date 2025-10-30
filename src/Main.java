@@ -221,5 +221,54 @@ public class Main {
             System.out.println(jedenNasobek);
         }*/
 
+        //Smycka while
+        /*int ridiciPromnenna = 0;
+
+
+        while (ridiciPromnenna !=0) {
+            System.out.println(ridiciPromnenna);
+            ridiciPromnenna++;
+        }
+        do {
+            System.out.println(ridiciPromnenna);
+            //ridiciPromnena++;
+        }while(ridiciPromnenna != 0);*/
+
+        //break = ukonceni smycky; continue - ukonceni interace a pokracovani dale
+/*
+    int ridiciPromnenna = 0;
+
+        while (true){
+            System.out.println("Smycka porad jede");
+
+            if(ridiciPromnenna > 5){
+            break;
+            }
+            ridiciPromnenna++;
+        }*/
+
+        int hozeneCislo;
+        boolean ridiciPromnenna = true;
+        Random nahodnyGenerator = new Random();
+        Scanner mujScanner = new Scanner(System.in);
+
+        do {
+            System.out.println("Pro hru kostkou stiskni enter");
+            mujScanner.nextLine();
+
+
+        }while(ridiciPromnenna);
+
+        hozeneCislo = nahodnyGenerator.nextInt(1,7);
+        System.out.println("Hozene cislo: " + hozeneCislo);
+
+        if(hozeneCislo % 2 == 1){
+            System.out.println("Licha vyhravas");
+        }
+        else {
+            System.out.println("Suda prohravas");
+        }
+
+        }
     }
-}
+
