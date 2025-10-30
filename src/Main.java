@@ -1,4 +1,3 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -222,53 +221,65 @@ public class Main {
         }*/
 
         //Smycka while
-        /*int ridiciPromnenna = 0;
+        /*int ridiciPromenna = 0;
 
 
-        while (ridiciPromnenna !=0) {
-            System.out.println(ridiciPromnenna);
-            ridiciPromnenna++;
+        while(ridiciPromenna != 0){
+            System.out.println(ridiciPromenna);
+            ridiciPromenna++;
         }
-        do {
-            System.out.println(ridiciPromnenna);
-            //ridiciPromnena++;
-        }while(ridiciPromnenna != 0);*/
 
-        //break = ukonceni smycky; continue - ukonceni interace a pokracovani dale
-/*
-    int ridiciPromnenna = 0;
+        do{
+            System.out.println(ridiciPromenna);
+            //ridiciPromenna++;
+        }while(ridiciPromenna != 0);*/
 
-        while (true){
-            System.out.println("Smycka porad jede");
+        //break = ukonceni smycky; continue = ukonceni iterace a pokracovani dale
 
-            if(ridiciPromnenna > 5){
-            break;
+        /*int ridiciPromenna = 0;
+
+        while(true){
+            System.out.println(ridiciPromenna);
+
+            if(ridiciPromenna > 5){
+                continue;
             }
-            ridiciPromnenna++;
+            ridiciPromenna++;
         }*/
 
+        //Hod kostkou vylepseni o smycku
+
         int hozeneCislo;
-        boolean ridiciPromnenna = true;
+        boolean ridiciPromenna = true;
+        String ukonceni = "";
         Random nahodnyGenerator = new Random();
         Scanner mujScanner = new Scanner(System.in);
 
         do {
-            System.out.println("Pro hru kostkou stiskni enter");
+            System.out.println("Pro hod kostkou siskni enter");
             mujScanner.nextLine();
 
+            hozeneCislo = nahodnyGenerator.nextInt(1,7);
+            System.out.println("Hozene cislo: " + hozeneCislo);
 
-        }while(ridiciPromnenna);
+            if(hozeneCislo % 2 == 1){
+                System.out.println("Licha vyhravas");
+            }
+            else {
+                System.out.println("Suda prohravas");
+            }
 
-        hozeneCislo = nahodnyGenerator.nextInt(1,7);
-        System.out.println("Hozene cislo: " + hozeneCislo);
+            System.out.println("Pro ukonceni hry zadej pismeno q");
+            ukonceni = mujScanner.nextLine();
+            if(ukonceni.equals("q")) {
+                ridiciPromenna = false;
+            }
 
-        if(hozeneCislo % 2 == 1){
-            System.out.println("Licha vyhravas");
-        }
-        else {
-            System.out.println("Suda prohravas");
-        }
+        }while(ridiciPromenna);
 
-        }
+        //Blackjack
+
+
+
     }
-
+}
